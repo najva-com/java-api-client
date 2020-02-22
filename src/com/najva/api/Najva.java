@@ -79,7 +79,7 @@ public class Najva {
     }
 
 
-    public String buildBody(Map<String, Object> body) {
+    private String buildBody(Map<String, Object> body) {
         StringBuilder builder = new StringBuilder();
         boolean isFirst = true;
         builder.append("{");
@@ -106,7 +106,7 @@ public class Najva {
         return builder.toString();
     }
 
-    public void appendList(StringBuilder builder, List list) {
+    private void appendList(StringBuilder builder, List list) {
         builder.append("[");
         boolean isFirst = true;
         for (Object obj : list) {
@@ -119,7 +119,7 @@ public class Najva {
         builder.append("]");
     }
 
-    public void appendJson(StringBuilder builder, Map map) {
+    private void appendJson(StringBuilder builder, Map map) {
         builder.append("\"{");
         boolean isFirst = true;
         for (Object key : map.keySet()) {
